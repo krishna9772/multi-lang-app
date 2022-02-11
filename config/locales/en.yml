@@ -1,0 +1,61 @@
+en:
+  layouts:
+    application:
+      title: "SS Lab"  
+  static_page:
+    index:
+      welcome: "Welcome"
+      service: "We provide following test in Our Lab"
+      cbc: "Complete Blood Count"
+      bmp: "Basic Metabolic Panel"
+      tsh: "Thyroid Stimulating Hormone"
+      ha: "Hemoglobin A1C"
+      cultures: "Cultures"
+      pt: "Prothrombin Time"
+  global:
+    forms:
+      messages:
+        errors:
+          one: "one error prohibited this feedback from being saved "
+          other: " %{count} error prohibited this feedback from being saved "
+      submit: "submit"
+  feedback:
+    new:
+      back: "back"      
+      title: "New patient feedback"  
+    index:
+      new_feedback: "New Patient Feedback"
+      feedback: "Patients Feedback"  
+      name: "Name"
+      email: "Email"
+      doctor_name: "Doctor Name"
+      feedback: "Feedback"
+      action: "Action"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      newfeedback: "new patient feedback" 
+    show:
+      name: "Name"
+      email: "Email"
+      role: "role"
+      feedback: "Feedback" 
+      edit: "Edit"
+      back: "back"          
+  activerecord:
+    models:
+      feedback: "Patient Feedback"
+    attributes:
+      feedback:
+        name: "Name"
+        email: "Email"
+        role: "role"
+        feedback: "Feedback " 
+        name_en: "Name (eng)"
+        email_en: "Email (eng)"
+        doctor_name_en: "Doctor Name (eng)" 
+        feedback_en: "Feedback (eng) "
+        name_ja: "Name (ja) "
+        email_ja: "Email (ja)"
+        doctor_name_ja: "Doctor (ja)"
+        feedback_ja: "Feedback (ja)"     

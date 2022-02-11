@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Intertionalization
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        %a.navbar-brand{:href => "#"} Navbar
+        %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          %ul.navbar-nav.d-flex
+            %li.nav-item
+              -# %a.nav-link.active{"aria-current" => "page", :href => "#"} New Feedbacks
+              = link_to 'New Feedback', new_feedback_path , {class: 'nav-link active'}
+            %li.nav-item
+              %a.nav-link{:href => "/en"} Eng
+            %li.nav-item
+              %a.nav-link{:href => "/ja"} JPA
+           
+    .container
+      = yield

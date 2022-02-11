@@ -1,0 +1,21 @@
+%br/
+%br/
+%br/
+.container
+  %p#notice= notice
+  = l @user_feedback.created_at, format: :long
+  %p
+    %strong= t ".patient_name"
+    = @user_feedback.name
+  %p
+    %strong= t ".patient_email"
+    = @user_feedback.email
+  %p
+    %strong= t ".role"
+    = @user_feedback.role
+  %p
+    %strong= t ".feedback"
+    = @user_feedback.feedback
+  = link_to t('.edit'), edit_feedback_path(@user_feedback)
+  |
+  = link_to t('.back'), feedback_path

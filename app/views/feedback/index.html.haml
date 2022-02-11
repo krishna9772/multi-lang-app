@@ -1,0 +1,49 @@
+-# <br><br><br>
+-# <p id="notice"><%= notice %></p>
+
+.container
+    %h1
+        = t '.Feedback'
+        
+    %table.table
+        %thead.thead-dark
+            %tr
+                %th{:scope=>"col"}
+                    = t ".Name"
+                %th{:scope=>"col"}
+                    = t ".Email"
+                %th{:scope=>"col"}
+                    = t ".Role"
+                %th{:scope=>"col"}
+                    = t ".Feedback"
+                %th{colspan: "3", scope: "col"}
+                    = t ".action"
+                
+
+        %tbody>
+            - @user_feedbacks.each do |feedback| 
+                %tr
+                    %td
+                        = feedback.name
+                    %td
+                        = feedback.email
+                    %td
+                        = feedback.role
+                    %td
+                        = feedback.feedback
+                    %td
+                        = link_to t('.show'), feedback_path(feedback)
+                    %td
+                        = link_to t('.edit'), edit_feedback_path(feedback)
+                    %td
+                        = link_to t('.destroy'), feedback_path(feedback), method: :delete, data: { confirm: 'Are you sure?' }
+                
+    %br
+
+    = link_to t('.new_feedback'), new_feedback_path 
+    
+
+
+
+
+
