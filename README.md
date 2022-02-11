@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Hello coders: These are the pre-requirements to run an awesome app. 
 
 * Ruby version
 
+    - 2.6 +
+
 * System dependencies
 
-* Configuration
+    - gem 'mobility', '~> 1.2', '>= 1.2.5'
 
-* Database creation
+    - gem "mysql2", "~> 0.5"
 
-* Database initialization
+    - gem 'haml'
 
-* How to run the test suite
+    reference - https://github.com/shioyama/mobility
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Create you own new database yml from database.example.yml
 
-* ...
+
+* Commands to run
+
+    - bundle install
+
+    - rails db:create
+
+    - rails generate mobility:install
+    
+    - rails db:migrate
+
+
+
